@@ -89,13 +89,9 @@ class LinkedList
     return @head = @head.next_node if index.zero?
 
     prev_node = at(index - 1)
-    if at(index) == @tail
-      @tail = prev_node
-      @tail.next_node = nil
-    else
-      node_to_remove = at(index)
-      prev_node.next_node = node_to_remove.next_node
-    end
+    @tail = prev_node if at(index) == @tail
+    node_to_remove = at(index)
+    prev_node.next_node = node_to_remove.next_node
   end
 
   def to_s

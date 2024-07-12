@@ -42,5 +42,7 @@ puts "list after append/prepend #{test_list}"
 # puts "list after remove at 0: #{test_list}"
 # test_list.prepend('test10')
 # puts "prepend #{test_list}"
+test_list.remove_at(4)
+puts test_list
 puts "head #{test_list.head}"
 puts "tail #{test_list.tail}"
